@@ -1,0 +1,319 @@
+:root {
+	--main-brand-color: #00C0EB;
+	--main-brand-faded: #A9E4F5;
+	--main-brand-accent: #E4572E;
+	--second-brand-color: #E4572E;
+	--second-brand-faded: #FDB19A;
+	--second-brand-accent: #00C0EB;
+	--third-brand-color: #76B041;
+	--third-brand-faded: #C2DFA4;
+	--third-brand-accent: #7A41B0;
+}
+
+/* GENERAL STYLES */
+
+a {
+	text-decoration: none;
+}
+
+.button {
+	font-weight: bold;
+	border: none;
+	border-radius: .2em;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 1.5em 2em;
+}
+
+.button:hover {
+	transform: translateY(-10%);
+}
+
+/* SLIDE STYLES */
+
+/* Flex Parent */
+.section-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* HEADER & FOOTER STYLES */
+
+#header {
+	top: 0;
+}
+
+#footer {
+	bottom: 0;
+}
+
+#header,
+#footer {
+	/* display: block; */
+	position: fixed;
+	min-width: 100%;
+	height: 15%;
+	z-index: 10;
+	/* background-color: blueviolet; */
+}
+
+/* Flex Parents */
+#header-wrapper,
+#footer-wrapper {
+	display: flex;
+	height: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+/* Flex Children of #header-wrapper, #footer-wrapper */
+/* Flex Parents */
+#header-logo,
+#header-menu,
+#header-button,
+#footer-menu {
+	display: flex;
+	/* width: 100%; */
+}
+
+/* Flex Children of #header-logo, #header-menu, #header-button, #footer-menu */
+/* Flex Parents */
+#header-logo-anchor,
+#header-nav-menu,
+#header-button-anchor,
+#footer-nav-menu {
+	display: inline-flex;
+	/* justify-content: space-around; */
+	/* width: 80%; */
+	/* margin: 0 auto; */
+}
+
+/* Flex Parents */
+#header-nav-menu li,
+#footer-nav-menu li {
+	display: inline-flex;
+	padding: 1em 2em;
+}
+
+/* Flex Children of #header-nav-menu li, #footer-nav-menu li */
+#header-nav-menu li a,
+#footer-nav-menu li a {
+	color: rgba(255, 255, 255, .6);
+	transition: all .25s;
+}
+
+/* Flex Child of #header-nav-menu li */
+#header-nav-menu li a {
+	font-size: .75em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+/* Flex Child of #footer-nav-menu li */
+#footer-nav-menu li a {
+	font-size: 1.75em;
+}
+
+#header-nav-menu li a.active {
+	color: white;
+}
+
+#header-nav-menu li a:hover:not(.active),
+#footer-nav-menu li a:hover,
+#header-nav-menu li a:focus:not(.active),
+#footer-nav-menu li a:focus {
+	color: white;
+	transform: translateY(-20%);
+}
+
+#header-button .button {
+	background-color: var(--main-brand-accent);
+}
+
+/* Button Load/Scroll Animation */
+
+#header-button .button,
+.fp-viewing-What-We-Do #header-button .button,
+.fp-viewing-Get-In-Touch #header-button .button {
+	font-size: .75em;
+	transition: background-color 2s, transform .25s;
+}
+
+.fp-viewing-What-We-Do #header-button .button {
+	background-color: var(--second-brand-accent);
+}
+
+.fp-viewing-Get-In-Touch #header-button .button {
+	background-color: var(--third-brand-accent);
+}
+
+/* WELCOME SLIDE STYLES - #welcome-slide - .fp-viewing-Welcome */
+
+#welcome-title h1 {
+	text-transform: none;
+	line-height: 1.25em;
+	padding: 3em;
+}
+
+/* WORK SLIDE STYLES - #work-slide - .fp-viewing-What-We-Do */
+
+/* Flex Children of .section-slide */
+/* Flex Parents */
+#work-title,
+#work-blurb-row {
+	margin: 2em auto;
+}
+
+/* Flex Child of .section-slide */
+/* Flex Parent */
+#work-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Flex Child of #work-title */
+#work-title .line {
+	min-width: 7em;
+	min-height: .35em;
+	background-color: var(--second-brand-faded);
+	border-radius: 1em;
+	margin: 1em auto;
+}
+
+/* Flex Child of #work-title */
+#work-title p {
+	font-size: 1.25em;
+	line-height: 1.25em;
+	max-width: 60%;
+}
+
+/* Flex Child of .section-slide */
+/* Flex Parent */
+#work-blurb-row {
+	display: flex;
+}
+
+/* Flex Child of #work-blurb-row */
+/* Flex Parent */
+#work-blurb-row .blurb {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.blurb p {
+	line-height: 1.25em;
+	max-width: 80%;
+}
+
+.blurb h3 {
+	margin: 1.5em auto;
+}
+
+/* CONTACT SLIDE STYLES - #contact-slide - .fp-viewing-Get-In-Touch */
+
+#contact-title,
+#contact-form .form-row .button {
+	margin: 2em auto 2em auto;
+}
+
+/* Flex Child of .section-slide */
+#contact-form {
+	min-width: 80%;
+}
+
+/* Flex Parent */
+#form-rows .form-row {
+	display: flex;
+}
+
+/* Flex Children of .form-row */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+	border: none;
+	font-size: .85em;
+	border-radius: .2em;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, .35);
+}
+
+/* Flex Children of .form-row */
+.form-row input[type="text"],
+.form-row input[type="email"] {
+	width: 50%;
+	height: 1em;
+	margin: .5em;
+}
+
+/* Flex Children of .form-row */
+.form-row textarea {
+	width: 100%;
+	height: 10em;
+	margin: .5em;
+}
+
+/* Flex Children of .form-row */
+.form-row input[type="text"]::placeholder,
+.form-row input[type="email"]::placeholder,
+.form-row textarea::placeholder {
+	color: white;
+}
+
+/* Flex Children of .form-row */
+.form-row input[type="submit"] {
+	background-color: var(--third-brand-accent);
+	transition: all .3s ease;
+}
+
+/* AFTER RENDER ANIMATIONS */
+
+/* Main Container afterRender Animations */
+
+.loaded #fullpage > * {
+  height: 100%;
+  width: 100%;
+  animation: animate 1.3s ease-in 0.2s forwards;
+}
+
+@keyframes animate {
+  0%	{transform: scale(0.02/*width*/, 0.002/*height*/); opacity: 0;}
+  45%	{transform: scale(1/*width*/, 0.002/*height*/); opacity: 1;}
+  100% {transform: scale(1/*width*/, 1/*height*/); opacity: 1;}
+}
+
+/* Section 1 afterRender Animations */
+
+.animation {
+	animation-name: bounceInUp, fadeIn;
+	animation-duration: 1s, 1.1s;
+}
+
+/* ANIMATIONS */
+
+.bounceIn-left {
+	animation-name: bounceInLeft, fadeIn;
+	animation-duration: 1s, 1.1s;
+}
+
+.bounceIn-down {
+	animation-name: bounceInDown, fadeIn;
+	animation-duration: 1s, 1.1s;
+}
+
+.bounceIn-right {
+	animation-name: bounceInRight, fadeIn;
+	animation-duration: 1s, 1.1s;
+}
+
+.bounceIn-up {
+	animation-name: bounceInUp, fadeIn;
+	animation-duration: 1s, 1.1s;
+}

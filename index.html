@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Sasquatch Multimedia</title>
+	<meta name="author" content=""/>
+	<meta name="description" content=""/>
+	<meta name="keywords"  content=""/>
+	<meta name="Resource-type" content="Document"/>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+	<header id="header">
+		<div id="header-wrapper">
+			<div id="header-logo">
+				<a id="header-logo-anchor" href="#Welcome">
+					<img src="img/sasquatch-logo-type.png">
+				</a>
+			</div>
+			<nav id="header-menu">
+				<ul id="header-nav-menu">
+					<li class="is-animated">
+						<a data-menuanchor="Welcome" href="#Welcome">Welcome</a>
+					</li>
+					<li class="is-animated">
+						<a data-menuanchor="What-We-Do" href="#What-We-Do">What We Do</a>
+					</li>
+					<li class="is-animated">
+						<a data-menuanchor="Get-In-Touch" href="#Get-In-Touch">Get In Touch</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="header-button">
+				<a id="header-button-anchor" href="#Get-In-Touch">
+					<button class="button">Work with us!</button>
+				</a>
+			</div>
+		</div>
+	</header>
+	<main id="fullpage">
+		<section class="section">
+			<div id="welcome-slide" class="section-slide">
+				<div id="welcome-title" class="is-animated">
+					<h1>Hi there! We are the new kids on the block and we build awesome websites and apps</h1>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div id="work-slide" class="section-slide">
+				<div id="work-title" class="is-animated">
+					<h2 class="is-animated">What We Do</h2>
+					<div class="line is animated"></div>
+					<p class="is-animated">We are working with individuals and businesses from all over the globe to create awesome websites and applications.</p>
+				</div>
+				<div id="work-blurb-row" class="is-animated">
+					<div class="blurb">
+						<img class="blurb-img" src="img/flag-icon.png">
+						<h3>Branding</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="blurb">
+						<img class="blurb-img" src="img/crayon-icon.png">
+						<h3>Design</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="blurb">
+						<img class="blurb-img" src="img/gears-icon.png">
+						<h3>Development</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div id="contact-slide" class="section-slide">
+				<div id="contact-title" class="is-animated">
+					<h2>Get In Touch</h2>
+				</div>
+				<div id="contact-form" class="is-animated">
+					<form id="form-rows">
+						<div class="form-row">
+							<input type="text" name="name" placeholder="Your Name">
+							<input type="email" name="email" placeholder="Your Email">
+						</div>
+						<div class="form-row">
+							<textarea name="message" placeholder="Your Message"></textarea>
+						</div>
+						<div class="form-row">
+							<input type="submit" class="button" value="Send Message">
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer id="footer">
+		<div id="footer-wrapper">
+			<nav id="footer-menu">
+				<ul id="footer-nav-menu">
+					<li class="is-animated">
+						<a href="#" target="_blank">
+							<i class="icon ion-logo-facebook"></i>
+						</a>
+					</li>
+					<li class="is-animated">
+						<a href="#" target="_blank">
+							<i class="icon ion-logo-google"></i>
+						</a>
+					</li>
+					<li class="is-animated">
+						<a href="#" target="_blank">
+							<i class="icon ion-logo-linkedin"></i>
+						</a>
+					</li>
+					<li class="is-animated">
+						<a href="#" target="_blank">
+							<i class="icon ion-logo-github"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fullpage.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#fullpage').fullpage({
+			menu: ['#header-nav-menu'],
+			anchors: ['Welcome', 'What-We-Do', 'Get-In-Touch'],
+			navigation: ['true'],
+			css3: ['true'],
+			scrollingSpeed: [800],
+			//verticalCentered: ['false'],
+			sectionsColor: ['#00C0EB', '#E4572E', '#76B041'],
+			fixedElements: ['#header', '#footer'],
+			afterRender: function(){
+				var pluginContainer = $(this);
+				var $afterRenderWelcomeSlide = $('#welcome-slide .is-animated');
+				var $afterRenderHeaderLogo = $('#header-logo-anchor');
+				var $afterRenderHeaderMenu = $('#header-nav-menu .is-animated');
+				var $afterRenderHeaderButton = $('#header-button-anchor');
+				var $afterRenderFooterMenu = $('#footer-nav-menu .is-animated');
+				$('body').addClass('loaded');
+				setTimeout(function(){
+					$('body').removeClass('loaded');
+				}, 1800);
+				$afterRenderWelcomeSlide.addClass('animated bounceIn-up');
+				$afterRenderWelcomeSlide.css('animation-delay', '1.6s');
+				setTimeout(function(){
+					$afterRenderWelcomeSlide.removeClass('animated bounceIn-up');
+					$afterRenderWelcomeSlide.removeAttr('style');
+				}, 2800);
+				$afterRenderHeaderLogo.addClass('animated bounceIn-left');
+				$afterRenderHeaderLogo.css('animation-delay', '1.65s');
+				setTimeout(function(){
+					$afterRenderHeaderLogo.removeAttr('class style');
+				}, 2900);
+				$afterRenderHeaderMenu.addClass('animated bounceIn-down');
+				$afterRenderHeaderMenu.eq(0).css('animation-delay', '1.75s');
+				$afterRenderHeaderMenu.eq(1).css('animation-delay', '1.8s');
+				$afterRenderHeaderMenu.eq(2).css('animation-delay', '1.85s');
+				setTimeout(function(){
+					$afterRenderHeaderMenu.removeAttr('class style');
+				}, 3300);
+				$afterRenderHeaderButton.addClass('animated bounceIn-right');
+				$afterRenderHeaderButton.css('animation-delay', '1.7s');
+				setTimeout(function(){
+					$afterRenderHeaderButton.removeAttr('class style');
+				}, 3100);
+				$afterRenderFooterMenu.addClass('animated bounceIn-up');
+				$afterRenderFooterMenu.eq(0).css('animation-delay', '1.9s');
+				$afterRenderFooterMenu.eq(1).css('animation-delay', '1.95s');
+				$afterRenderFooterMenu.eq(2).css('animation-delay', '2s');
+				$afterRenderFooterMenu.eq(3).css('animation-delay', '2.05s');
+				setTimeout(function(){
+					$afterRenderFooterMenu.removeAttr('class style');
+				}, 3500);
+			},
+			onLeave: function(origin, destination, direction){
+				var leavingSection = $(this);
+				var $onLeaveWelcomeSlide = $('#welcome-slide .is-animated');
+				var $onLeaveWorkSlide = $('#work-slide .is-animated');
+				var $onLeaveContactSlide = $('#contact-slide .is-animated');
+				// SCROLLING DOWN from SECTION 1 into SECTION 2
+				// From 'Welcome' to 'What-We-Do'
+				if(origin.anchor == 'Welcome' && direction =='down'){
+					$onLeaveWelcomeSlide.addClass('animated fadeOut');
+					$onLeaveWelcomeSlide.css('animation-duration', '350ms');
+					setTimeout(function(){
+						$onLeaveWelcomeSlide.removeClass('animated fadeOut');
+						$onLeaveWelcomeSlide.removeAttr('style');
+					}, 500);
+					$onLeaveWorkSlide.addClass('animated fadeIn');
+					$onLeaveWorkSlide.css('animation-duration', '1.5s');
+					setTimeout(function(){
+						$onLeaveWorkSlide.removeClass('animated fadeIn');
+						$onLeaveWorkSlide.removeAttr('style');
+					}, 500);
+				}
+				// SCROLLING DOWN from SECTION 2 into SECTION 3
+				// From 'What-We-Do' to 'Get-In-Touch'
+				if(origin.anchor == 'What-We-Do' && direction =='down'){
+					$onLeaveWorkSlide.addClass('animated fadeOut');
+					$onLeaveWorkSlide.css('animation-duration', '350ms');
+					setTimeout(function(){
+						$onLeaveWorkSlide.removeClass('animated fadeOut');
+						$onLeaveWorkSlide.removeAttr('style');
+					}, 500);
+					$onLeaveContactSlide.addClass('animated fadeIn');
+					$onLeaveContactSlide.css('animation-duration', '1.5s');
+					setTimeout(function(){
+						$onLeaveContactSlide.removeClass('animated fadeIn');
+						$onLeaveContactSlide.removeAttr('style');
+					}, 500);
+				}
+				// SCROLLING UP from SECTION 2 into SECTION 1
+				// From 'What-We-Do' to 'Welcome'
+				else if(origin.anchor == 'What-We-Do' && direction =='up'){
+					$onLeaveWelcomeSlide.addClass('animated fadeIn');
+					$onLeaveWelcomeSlide.css('animation-duration', '1.5s');
+					setTimeout(function(){
+						$onLeaveWelcomeSlide.removeClass('animated fadeIn');
+						$onLeaveWelcomeSlide.removeAttr('style');
+					}, 500);
+					$onLeaveWorkSlide.addClass('animated fadeOut');
+					$onLeaveWorkSlide.css('animation-duration', '350ms');
+					setTimeout(function(){
+						$onLeaveWorkSlide.removeClass('animated fadeOut');
+						$onLeaveWorkSlide.removeAttr('style');
+					}, 500);
+				}
+				// SCROLLING UP from SECTION 3 into SECTION 2 
+				// From 'Get-In-Touch' to 'What-We-Do'
+				if(origin.anchor == 'Get-In-Touch' && direction =='up'){
+					$onLeaveWorkSlide.addClass('animated fadeIn');
+					$onLeaveWorkSlide.css('animation-duration', '1.5s');
+					setTimeout(function(){
+						$onLeaveWorkSlide.removeClass('animated fadeIn');
+						$onLeaveWorkSlide.removeAttr('style');
+					}, 500);
+					$onLeaveContactSlide.addClass('animated fadeOut');
+					$onLeaveContactSlide.css('animation-duration', '350ms');
+					setTimeout(function(){
+						$onLeaveContactSlide.removeClass('animated fadeOut');
+						$onLeaveContactSlide.removeAttr('style');
+					}, 500);
+				}
+			},
+		});
+	});
+	</script>
+	</body>
+</html>
