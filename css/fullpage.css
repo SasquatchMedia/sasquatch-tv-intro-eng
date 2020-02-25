@@ -106,10 +106,10 @@ html.fp-enabled,
     transform: translate3d(0,0,0);
 }
 #fp-nav.fp-right {
-    right: 5%;
+    right: 4%;
 }
 #fp-nav.fp-left {
-    left: 5%;
+    left: 4%;
 }
 .fp-slidesNav{
     position: absolute;
